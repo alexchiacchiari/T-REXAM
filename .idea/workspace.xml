@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="T - REXAM" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f6f0d3f1-7b57-4ecb-aee0-d647595b310b" name="Default Changelist" comment="Snapshot 0.0.1" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="1excOJi5myNkntVdM70dSCsFsBD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/alexc/Downloads/aem-gov",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="platform.gui" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="T - REXAM GAME" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in T - REXAM GAME" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="T - REXAM GAME" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in T - REXAM GAME" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6f0d3f1-7b57-4ecb-aee0-d647595b310b" name="Default Changelist" comment="" />
+      <created>1595266650218</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595266650218</updated>
+      <workItem from="1595266653883" duration="305000" />
+      <workItem from="1595268630102" duration="1603000" />
+      <workItem from="1595322042487" duration="21561000" />
+      <workItem from="1595407166136" duration="15879000" />
+      <workItem from="1595438961686" duration="5215000" />
+      <workItem from="1595449007700" duration="6334000" />
+      <workItem from="1595494100667" duration="13780000" />
+      <workItem from="1595511961476" duration="1598000" />
+      <workItem from="1595523093359" duration="1444000" />
+      <workItem from="1595541067961" duration="1832000" />
+      <workItem from="1595574680981" duration="13874000" />
+      <workItem from="1595677508309" duration="2416000" />
+      <workItem from="1595685200372" duration="2098000" />
+      <workItem from="1596974367628" duration="149000" />
+      <workItem from="1596974926131" duration="1329000" />
+      <workItem from="1596980009921" duration="96000" />
+      <workItem from="1596980242936" duration="608000" />
+      <workItem from="1596998784771" duration="764000" />
+      <workItem from="1598528761852" duration="799000" />
+      <workItem from="1598629403306" duration="345000" />
+      <workItem from="1600978745602" duration="139000" />
+      <workItem from="1605650806458" duration="618000" />
+      <workItem from="1608313611968" duration="601000" />
+      <workItem from="1611856031071" duration="800000" />
+      <workItem from="1612379945563" duration="362000" />
+      <workItem from="1612380682565" duration="1187000" />
+      <workItem from="1622023196331" duration="1433000" />
+      <workItem from="1622481685395" duration="138000" />
+      <workItem from="1640704829902" duration="620000" />
+      <workItem from="1640705629780" duration="900000" />
+      <workItem from="1640707039207" duration="819000" />
+      <workItem from="1654073177604" duration="1297000" />
+      <workItem from="1654075360393" duration="1795000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/MainPlayer.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/MainPlayer.java" line="50">
+        <watch expression="((MainPlayer)this).speedY" language="JAVA" custom="platform.game_objects.MainPlayer" />
+      </inline-watch>
+    </watches-manager>
+  </component>
+</project>
