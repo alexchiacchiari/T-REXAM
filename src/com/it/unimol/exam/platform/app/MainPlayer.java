@@ -58,8 +58,10 @@ public class MainPlayer {
     }
 
     public void jump() {
-         speedY = -3;
-        y = (int) (y + speedY);
+        if (speedY == 0) {
+            speedY = -3;
+            y = (int) (y + speedY);
+        }
     }
 
     public int getX() {

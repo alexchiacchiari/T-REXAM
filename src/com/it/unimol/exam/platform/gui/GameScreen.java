@@ -101,12 +101,17 @@ public class GameScreen extends JPanel {
     }
 
     public class PlayerController implements KeyListener {
+        private boolean spaceHeld = false;
+
         @Override
         public void keyPressed(KeyEvent e) {
             int key = e.getKeyCode();
 
             if (key == KeyEvent.VK_SPACE || key == KeyEvent.VK_UP) {
-                player.jump();
+                if (!spaceHeld) {
+                    spaceHeld = true;
+                    player.jump();
+                }
             }
 
             if (key == KeyEvent.VK_X) {
@@ -120,17 +125,17 @@ public class GameScreen extends JPanel {
         @Override
         public void keyReleased(KeyEvent e) {
             int key = e.getKeyCode();
+            if (key == KeyEvent.VK_SPACE || key == KeyEvent.VK_UP) {
+                spaceHeld = false;
+            }
             if (key == KeyEvent.VK_SPACE) {
                 if (gameState == GAME_FIRST_STATE) {
                     gameState = GAME_PLAY_STATE;
-                } else if (gameState == GAME_PLAY_STATE) {
-                    player.jump();
                 } else if (gameState == GAME_OVER_STATE) {
                     resetGame();
                     gameState = GAME_PLAY_STATE;
                 }
             }
-
         }
     }
 

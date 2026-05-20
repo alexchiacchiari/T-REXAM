@@ -9,23 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6f0d3f1-7b57-4ecb-aee0-d647595b310b" name="Default Changelist" comment="Enhanced animation fluidity">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/cactus1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/cactus1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/cactus2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/cactus2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/gameover_text.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gameover_text.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/land1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/land1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/land2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/land2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/land3.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/land3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/main-character1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/main-character-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/main-character2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/main-character-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/animation/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/animation/Animation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/Cactus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/Cactus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/EnemiesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/EnemiesManager.java" afterDir="false" />
+    <list default="true" id="f6f0d3f1-7b57-4ecb-aee0-d647595b310b" name="Default Changelist" comment="Refactor">
       <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/MainPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/MainPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/Land.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/Land.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779280333290</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactor">
+      <option name="closed" value="true" />
+      <created>1779282444784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779282444784</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +186,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Enhanced animation fluidity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enhanced animation fluidity" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
