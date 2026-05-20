@@ -9,18 +9,20 @@ import java.util.*;
 import java.util.List;
 
 public class EnemiesManager {
-    private List<Enemy> enemies;
+    private final List<Enemy> enemies;
     private Cactus cactus;
-    private Random random;
-    private BufferedImage cactus1, cactus2;
-    private MainPlayer player;
-    private GameScreen gameScreen;
+    private final Random random;
+    private final BufferedImage cactus1;
+    private final BufferedImage cactus2;
+    private final MainPlayer player;
+    private final GameScreen gameScreen;
 
     public EnemiesManager(MainPlayer player, GameScreen gameScreen) {
+        this.cactus = cactus;
         this.player = player;
         this.gameScreen = gameScreen;
-        cactus1 = Resource.getImage("Files/cactus1.png");
-        cactus2 = Resource.getImage("Files/cactus2.png");
+        cactus1 = Resource.getImage("resources/cactus-1.png");
+        cactus2 = Resource.getImage("resources/cactus-2.png");
         enemies = new ArrayList<Enemy>();
         random = new Random();
         enemies.add(getRandomCactus());

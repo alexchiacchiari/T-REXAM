@@ -9,14 +9,14 @@ import javax.swing.*;
  * */
 
 public class GameWindow extends JFrame {
-    private GameScreen gameScreen = new GameScreen();
-    private GameScreen.PlayerController playerController = gameScreen.new PlayerController();
+    private final GameScreen gameScreen = new GameScreen();
     private static final int SCREEN_WIDTH = 600;
 
     public GameWindow() {
-        super("T - REXAM");
+        super("T-REXAM");
         prepareGui();
         add(gameScreen);
+        GameScreen.PlayerController playerController = gameScreen.new PlayerController();
         addKeyListener(playerController);
         setVisible(true);
     }

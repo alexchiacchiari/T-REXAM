@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Animation {
-    private List<BufferedImage> frames;
+    private final List<BufferedImage> frames;
     private int frameCounter = 0;
 
     public Animation() {
@@ -24,7 +24,7 @@ public class Animation {
     }
 
     public BufferedImage getFrame() {
-        if (frames.size() > 0) {
+        if (!frames.isEmpty()) {
             return frames.get(frameCounter);
         }
         return null;

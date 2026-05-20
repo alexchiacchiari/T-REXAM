@@ -8,14 +8,16 @@ import java.util.*;
 import java.util.List;
 
 public class Land {
-    private List<ImageLand> listImage;
-    private BufferedImage land1, land2, land3;
-    private Random random;
+    private final List<ImageLand> listImage;
+    private final BufferedImage land1;
+    private final BufferedImage land2;
+    private final BufferedImage land3;
+    private final Random random;
 
     public Land() {
-        land1 = Resource.getImage("Files/land1.png");
-        land2 = Resource.getImage("Files/land2.png");
-        land3 = Resource.getImage("Files/land3.png");
+        land1 = Resource.getImage("resources/land-1.png");
+        land2 = Resource.getImage("resources/land-2.png");
+        land3 = Resource.getImage("resources/land-3.png");
         random = new Random();
         listImage = new ArrayList<ImageLand>();
         int numberOfLand = 600 / land1.getWidth() + 2;

@@ -27,11 +27,10 @@ public class GameScreen extends JPanel {
     private int gameState = GAME_FIRST_STATE;
     public static final float GRAVITY = 0.1f;
     public static final int FLOOR = 110;
-    private Thread gameThread;
-    private MainPlayer player;
-    private Land land;
-    private EnemiesManager enemiesManager;
-    private BufferedImage gameOverImage;
+    private final MainPlayer player;
+    private final Land land;
+    private final EnemiesManager enemiesManager;
+    private final BufferedImage gameOverImage;
     private int score = 0;
 
     public GameScreen() {
@@ -40,14 +39,14 @@ public class GameScreen extends JPanel {
         player.setX(50);
         player.setY(60);
         enemiesManager = new EnemiesManager(player, this);
-        gameOverImage = Resource.getImage("Files/gameover_text.png");
+        gameOverImage = Resource.getImage("resources/gameover-text.png");
     }
 
     private static final long FRAME_TIME_NS = 10_000_000L; // 10ms = 100 FPS
     private static final Color BG_COLOR = new Color(0xf7f7f7);
 
     public void startGame() {
-        gameThread = new Thread(() -> {
+        Thread gameThread = new Thread(() -> {
             long nextFrame = System.nanoTime();
             while (true) {
                 update();

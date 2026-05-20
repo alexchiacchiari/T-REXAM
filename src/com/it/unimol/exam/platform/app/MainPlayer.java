@@ -3,6 +3,8 @@ package com.it.unimol.exam.platform.app;
 import com.it.unimol.exam.platform.animation.Animation;
 import com.it.unimol.exam.platform.animation.Resource;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+
 import static com.it.unimol.exam.platform.gui.GameScreen.FLOOR;
 import static com.it.unimol.exam.platform.gui.GameScreen.GRAVITY;
 
@@ -10,8 +12,8 @@ public class MainPlayer {
     private int x = 0;
     private int y = 0;
     private float speedY = 0;
-    private Animation playerRunImage;
-    private Rectangle rectangle;
+    private final Animation playerRunImage;
+    private final Rectangle rectangle;
     private boolean isAlive = true;
 
     public MainPlayer() {
@@ -21,10 +23,13 @@ public class MainPlayer {
     }
 
 
+    private static final int HITBOX_INSET = 6;
+
     public void update() {
         playerRunImage.updateFrame();
 
-        int playerHeight = playerRunImage.getFrame().getHeight();
+        BufferedImage frame = playerRunImage.getFrame();
+        int playerHeight = frame.getHeight();
         if (y >= FLOOR - playerHeight) {
             speedY = 0;
             y = FLOOR - playerHeight;
@@ -32,18 +37,18 @@ public class MainPlayer {
             y = (int) (y + speedY);
             speedY = speedY + GRAVITY;
         }
-        rectangle.x = x;
-        rectangle.y = y;
-        rectangle.width = playerRunImage.getFrame().getWidth();
-        rectangle.height = playerRunImage.getFrame().getHeight();
+        rectangle.x = x + HITBOX_INSET;
+        rectangle.y = y + HITBOX_INSET;
+        rectangle.width = frame.getWidth() - HITBOX_INSET * 2;
+        rectangle.height = frame.getHeight() - HITBOX_INSET * 2;
     }
 
     public void draw(Graphics g) {
         g.setColor(Color.BLACK);
-        //g.drawRect( x,
-        //            y,
-        //            playerRunImage.getFrame().getWidth(),
-        //            playerRunImage.getFrame().getHeight());  //rettangolo intorno al personaggio
+        /*g.drawRect( x,
+                   y,
+                    playerRunImage.getFrame().getWidth(),
+                    playerRunImage.getFrame().getHeight());  //rettangolo intorno al personaggio*/
 
         g.drawImage(playerRunImage.getFrame(), x, y, null);
     }
@@ -78,8 +83,8 @@ public class MainPlayer {
     }
 
     private void allFrames() {
-        playerRunImage.addFrame(Resource.getImage("Files/main-character1.png"));
-        playerRunImage.addFrame(Resource.getImage("Files/main-character2.png"));
+        playerRunImage.addFrame(Resource.getImage("resources/main-character-1.png"));
+        playerRunImage.addFrame(Resource.getImage("resources/main-character-2.png"));
     }
 
 
