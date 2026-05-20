@@ -1,7 +1,6 @@
 package com.it.unimol.exam.platform.app;
 
-import com.it.unimol.exam.platform.animation.Resource;
-
+import com.it.unimol.exam.platform.gui.GameScreen;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
@@ -13,22 +12,20 @@ public class Cactus extends Enemy {
 
     public Cactus(MainPlayer player) {
         this.player = player;
-        cactus = Resource.getImage("Files/cactus1.png");
         posX = 200;
-        posY = 65;
         rectangle = new Rectangle();
     }
 
     public void draw(Graphics g) {
         g.drawImage(cactus, posX, posY, null);
-        rectangle.x = posX;
-        rectangle.y = posY;
-        rectangle.width = cactus.getWidth();
-        rectangle.height = cactus.getHeight();
     }
 
     public void updateCactus() {
         posX = posX - 2;
+        rectangle.x = posX;
+        rectangle.y = posY;
+        rectangle.width = cactus.getWidth();
+        rectangle.height = cactus.getHeight();
     }
 
     public Rectangle getRectangle() {
@@ -61,5 +58,6 @@ public class Cactus extends Enemy {
 
     public void setImage(BufferedImage image) {
         this.cactus = image;
+        this.posY = GameScreen.FLOOR - image.getHeight();
     }
 }

@@ -5,8 +5,21 @@
       <artifact name="T - REXAM" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6f0d3f1-7b57-4ecb-aee0-d647595b310b" name="Default Changelist" comment="Snapshot 0.0.1" />
+    <list default="true" id="f6f0d3f1-7b57-4ecb-aee0-d647595b310b" name="Default Changelist" comment="Snapshot 0.0.1">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/cactus2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Files/cactus2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/main-character1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Files/main-character1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/main-character2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Files/main-character2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/Cactus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/Cactus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameWindow.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,18 +39,34 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0,
+  "fromUser": false
+}]]></component>
   <component name="ProjectId" id="1excOJi5myNkntVdM70dSCsFsBD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/alexc/Downloads/aem-gov",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ruby.rails.projectView.checked": "true"
+    "ruby.rails.projectView.checked": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -77,8 +106,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in T - REXAM GAME" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.All in T - REXAM GAME" />
       </list>
     </recent_temporary>
   </component>

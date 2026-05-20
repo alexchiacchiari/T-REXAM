@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
+import java.util.concurrent.locks.LockSupport;
 
 /**
  * Questa classe rappresenta il JPanel che viene aggiunto al JFrame di gioco (extends JPanel)
@@ -19,14 +20,14 @@ import java.awt.image.BufferedImage;
  * @author Alex Chiacchiari
  * */
 
-public class GameScreen extends JPanel implements Runnable {
+public class GameScreen extends JPanel {
     public static final int GAME_FIRST_STATE = 0;
     public static final int GAME_PLAY_STATE = 1;
     public static final int GAME_OVER_STATE = 2;
     private int gameState = GAME_FIRST_STATE;
     public static final float GRAVITY = 0.1f;
     public static final int FLOOR = 110;
-    private Thread thread;
+    private Thread gameThread;
     private MainPlayer player;
     private Land land;
     private EnemiesManager enemiesManager;
@@ -34,7 +35,6 @@ public class GameScreen extends JPanel implements Runnable {
     private int score = 0;
 
     public GameScreen() {
-        thread = new Thread(this);
         land = new Land();
         player = new MainPlayer();
         player.setX(50);
@@ -43,37 +43,31 @@ public class GameScreen extends JPanel implements Runnable {
         gameOverImage = Resource.getImage("Files/gameover_text.png");
     }
 
-    public void startGame() {
-        thread.start();
-    }
+    private static final long FRAME_TIME_NS = 10_000_000L; // 10ms = 100 FPS
+    private static final Color BG_COLOR = new Color(0xf7f7f7);
 
-    /**
-     * Permette di eseguire il metodo richiesto da Runnable per l'implementazione di un thread
-     * esegue tutte le operazioni di aggiornamento definite nelle classi cardine riguardo il loro "motore":
-     * @see MainPlayer
-     * @see EnemiesManager
-     * @see Land
-     * Viene invocato automaticamente quando viene chiamato il metodo start sul thread
-     * @throws InterruptedException se sussiste un problema di sincronizzazione tra i vari thread
-     **/
-    @Override
-    public void run() {
-        while(true) {
-            try {
+    public void startGame() {
+        gameThread = new Thread(() -> {
+            long nextFrame = System.nanoTime();
+            while (true) {
                 update();
                 repaint();
-                Thread.sleep(5);
-            } catch (InterruptedException e) {
-                JOptionPane.showMessageDialog(null,
-                        "Errore di elaborazione");
+                nextFrame += FRAME_TIME_NS;
+                long remaining = nextFrame - System.nanoTime();
+                if (remaining > 0) {
+                    LockSupport.parkNanos(remaining);
+                }
             }
-        }
+        });
+        gameThread.setDaemon(true);
+        gameThread.start();
     }
 
     @Override
-    public void paint(Graphics g) {
-        g.setColor(Color.decode("#f7f7f7"));
-        g.fillRect(0, 0 , getWidth(), getHeight());
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.setColor(BG_COLOR);
+        g.fillRect(0, 0, getWidth(), getHeight());
         //g.drawLine(0, FLOOR, getWidth(), FLOOR);  //SOLO PER ORIENTAMENTO: TERRENO
 
         switch (gameState) {
@@ -100,7 +94,7 @@ public class GameScreen extends JPanel implements Runnable {
                                     getHeight()/2 + 35);
                 break;
         }
-
+        Toolkit.getDefaultToolkit().sync();
     }
 
     public void setScore(int score) {

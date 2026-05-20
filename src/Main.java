@@ -1,8 +1,11 @@
 import com.it.unimol.exam.platform.gui.GameWindow;
+import javax.swing.SwingUtilities;
 
 public class Main {
     public static void main(String[] args) {
-        GameWindow gameWindow = new GameWindow();
-        gameWindow.startGame();
+        SwingUtilities.invokeLater(() -> {
+            GameWindow gameWindow = new GameWindow();
+            gameWindow.startGame();
+        });
     }
 }

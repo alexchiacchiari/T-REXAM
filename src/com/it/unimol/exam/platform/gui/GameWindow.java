@@ -18,6 +18,7 @@ public class GameWindow extends JFrame {
         prepareGui();
         add(gameScreen);
         addKeyListener(playerController);
+        setVisible(true);
     }
 
     public void startGame() {
@@ -25,7 +26,6 @@ public class GameWindow extends JFrame {
     }
 
     public void prepareGui() {
-        setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(SCREEN_WIDTH, 175);
         setResizable(false);
