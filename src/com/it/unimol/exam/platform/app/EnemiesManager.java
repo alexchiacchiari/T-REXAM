@@ -2,6 +2,7 @@ package com.it.unimol.exam.platform.app;
 
 import com.it.unimol.exam.platform.gui.GameScreen;
 import com.it.unimol.exam.platform.animation.Resource;
+import com.it.unimol.exam.platform.gui.GameWindow;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -28,9 +29,9 @@ public class EnemiesManager {
         enemies.add(getRandomCactus());
     }
 
-    public void updateEnemies() {
+    public void updateEnemies(int speed) {
         for(Enemy e : enemies) {
-            e.updateCactus();
+            e.updateCactus(speed);
             if(e.playerIsOverCactus()) {
                 gameScreen.setScore(1);
             }
@@ -61,7 +62,7 @@ public class EnemiesManager {
 
     private Cactus getRandomCactus() {
         Cactus cactus = new Cactus(player);
-        cactus.setPosX(600);
+        cactus.setPosX(GameWindow.SCREEN_WIDTH);
         if(random.nextBoolean()) {
             cactus.setImage(cactus1);
         } else {

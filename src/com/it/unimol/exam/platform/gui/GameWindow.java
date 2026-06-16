@@ -5,12 +5,12 @@ import javax.swing.*;
 /**
  *Finestra principale di gioco,
  *che ha il metodo {@link #startGame()} che permette di avviare il thread di gameScreen nel main
- *@author Alex Chiacchiari
+ *@author Alessio Antonelli
  * */
 
 public class GameWindow extends JFrame {
     private final GameScreen gameScreen = new GameScreen();
-    private static final int SCREEN_WIDTH = 600;
+    public static final int SCREEN_WIDTH = 600;
 
     public GameWindow() {
         super("T-REXAM");

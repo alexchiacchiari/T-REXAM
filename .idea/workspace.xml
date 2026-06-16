@@ -9,8 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6f0d3f1-7b57-4ecb-aee0-d647595b310b" name="Default Changelist" comment="Refactor">
-      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/MainPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/MainPlayer.java" afterDir="false" />
+    <list default="true" id="f6f0d3f1-7b57-4ecb-aee0-d647595b310b" name="Default Changelist" comment="Implemented Levels">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/Cactus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/Cactus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/EnemiesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/EnemiesManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/app/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/Land.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/it/unimol/exam/platform/gui/Land.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,16 +34,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alexchiacchiari&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alexchiacchiari/T-REXAM.git&quot;,
+    &quot;accountId&quot;: &quot;0e875b51-c5a9-47c8-991b-020c1847b1ae&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="1excOJi5myNkntVdM70dSCsFsBD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -60,6 +78,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "ruby.rails.projectView.checked": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
@@ -167,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779282444784</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix: double space pressing">
+      <option name="closed" value="true" />
+      <created>1779283885318</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779283885318</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +207,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -187,7 +222,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Enhanced animation fluidity" />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="fix: double space pressing" />
+    <MESSAGE value="Implemented Levels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Levels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

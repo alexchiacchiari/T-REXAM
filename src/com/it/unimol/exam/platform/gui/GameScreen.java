@@ -17,16 +17,18 @@ import java.util.concurrent.locks.LockSupport;
  * i vari metodi update() presenti nelle varie classi cardine
  * Questa classe gestisce l'intera grafica di gioco, perché si occupa di richiamare il metodo
  * {@link #startGame()}}
- * @author Alex Chiacchiari
+ * @author Alessio Antonelli
  * */
 
 public class GameScreen extends JPanel {
     public static final int GAME_FIRST_STATE = 0;
     public static final int GAME_PLAY_STATE = 1;
     public static final int GAME_OVER_STATE = 2;
-    private int gameState = GAME_FIRST_STATE;
     public static final float GRAVITY = 0.1f;
     public static final int FLOOR = 110;
+    private static final long FRAME_TIME_NS = 10_000_000L; // 10ms = 100 FPS
+    private static final Color BG_COLOR = new Color(0xf7f7f7);
+    private int gameState = GAME_FIRST_STATE;
     private final MainPlayer player;
     private final Land land;
     private final EnemiesManager enemiesManager;
@@ -41,9 +43,6 @@ public class GameScreen extends JPanel {
         enemiesManager = new EnemiesManager(player, this);
         gameOverImage = Resource.getImage("resources/gameover-text.png");
     }
-
-    private static final long FRAME_TIME_NS = 10_000_000L; // 10ms = 100 FPS
-    private static final Color BG_COLOR = new Color(0xf7f7f7);
 
     public void startGame() {
         Thread gameThread = new Thread(() -> {
@@ -77,7 +76,8 @@ public class GameScreen extends JPanel {
                 land.draw(g);
                 player.draw(g);
                 enemiesManager.draw(g);
-                g.drawString("SCORE: " + score, getWidth() - 90, 20);
+                int level = getGameSpeed() - 1;
+                g.drawString("LVL: " + level + "  SCORE: " + score, getWidth() - 150, 20);
                 break;
             case GAME_OVER_STATE:
                 land.draw(g);
@@ -98,6 +98,42 @@ public class GameScreen extends JPanel {
 
     public void setScore(int score) {
         this.score += score;
+    }
+
+    // Score accrues at ~13.5 pts/sec regardless of speed (scoring window and gap both scale with 1/speed)
+    private static final int[][] SPEED_THRESHOLDS = {
+        {2500, 6},  // ~3 min
+        {1750, 5},  // ~2 min
+        {1000, 4},  // ~1 min 15 sec
+        {500,  3},  // ~37 sec
+        {0,    2},
+    };
+
+    private int getGameSpeed() {
+        for (int[] threshold : SPEED_THRESHOLDS) {
+            if (score >= threshold[0]) return threshold[1];
+        }
+        return 2;
+    }
+
+    private void update() {
+        if (gameState == GAME_PLAY_STATE) {
+            int speed = getGameSpeed();
+            player.update();
+            land.updateLand(speed);
+            enemiesManager.updateEnemies(speed);
+            if (!player.getAlive()) {
+                gameState = GAME_OVER_STATE;
+            }
+        }
+    }
+
+    private void resetGame() {
+        player.setAlive(true);
+        player.setX(50);
+        player.setY(60);
+        enemiesManager.resetGame();
+        this.score = 0;
     }
 
     public class PlayerController implements KeyListener {
@@ -138,24 +174,4 @@ public class GameScreen extends JPanel {
             }
         }
     }
-
-    private void update() {
-        if (gameState == GAME_PLAY_STATE) {
-            player.update();
-            land.updateLand();
-            enemiesManager.updateEnemies();
-            if (!player.getAlive()) {
-                gameState = GAME_OVER_STATE;
-            }
-        }
-    }
-
-    private void resetGame() {
-        player.setAlive(true);
-        player.setX(50);
-        player.setY(60);
-        enemiesManager.resetGame();
-        this.score = 0;
-    }
-
 }

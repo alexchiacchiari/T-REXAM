@@ -20,7 +20,7 @@ public class Land {
         land3 = Resource.getImage("resources/land-3.png");
         random = new Random();
         listImage = new ArrayList<ImageLand>();
-        int numberOfLand = 600 / land1.getWidth() + 2;
+        int numberOfLand = GameWindow.SCREEN_WIDTH / land1.getWidth() + 2;
 
         for (int i = 0; i < numberOfLand; i++) {
             ImageLand imageLand = new ImageLand();
@@ -39,9 +39,10 @@ public class Land {
         }
     }
 
-    public void updateLand() {   //scorre i monti
+    public void updateLand(int speed) {
+        int landSpeed = Math.max(1, speed / 2);
         for (ImageLand imageLand : listImage) {
-            imageLand.setPosX(imageLand.getPosX() - 1);
+            imageLand.setPosX(imageLand.getPosX() - landSpeed);
         }
 
         ImageLand firstElement = listImage.get(0);

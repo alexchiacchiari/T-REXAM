@@ -4,7 +4,7 @@ import com.it.unimol.exam.platform.gui.GameScreen;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class Cactus extends Enemy {
+public class Cactus implements Enemy {
     private BufferedImage cactus;
     private int posX, posY;
     private final MainPlayer player;
@@ -18,7 +18,7 @@ public class Cactus extends Enemy {
 
     public void draw(Graphics g) {
         g.drawImage(cactus, posX, posY, null);
-        /*g.drawRect(posX,
+        g.drawRect(posX,
                 posY,
                 cactus.getWidth(),
                 cactus.getHeight());  //rettangolo intorno al cactus*/
@@ -26,8 +26,8 @@ public class Cactus extends Enemy {
 
     private static final int HITBOX_INSET = 5;
 
-    public void updateCactus() {
-        posX = posX - 2;
+    public void updateCactus(int speed) {
+        posX = posX - speed;
         rectangle.x = posX + HITBOX_INSET;
         rectangle.y = posY + HITBOX_INSET;
         rectangle.width = cactus.getWidth() - HITBOX_INSET * 2;
